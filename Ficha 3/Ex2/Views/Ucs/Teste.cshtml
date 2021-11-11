@@ -1,0 +1,26 @@
+﻿@model IEnumerable<string>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UCs Index</title>
+</head>
+<body>
+
+    @*<ul>
+        @foreach(var item in ViewBag.UCs)
+            {
+                <li>@item</li>
+            }
+    </ul>*@
+    <ul>
+        @foreach(var item in Model)
+            {
+                <li>@item.ToUpper()</li>
+            }
+    </ul>
+
+    @*passagem por viewbag no 1 exemplo
+        passagem por modelo no 2 exemplo
+        *@
+</body>
+</html>
