@@ -125,9 +125,6 @@ namespace Ex4.Controllers
             try
             {
                 
-                int maxId = (from x in UCsMockData.ListaUCs select x.Id).Max();
-
-                nova.Id = maxId + 1;
                 nova.Nome = collection["Nome"];
                 nova.Licenciatura = collection["Licenciatura"];
                 nova.Ramo = collection["Ramo"];
@@ -171,7 +168,6 @@ namespace Ex4.Controllers
                     return View(nova);
                 }
 
-                UCsMockData.ListaUCs.Add(nova);
                 return RedirectToAction(nameof(Index));
             }
             catch
