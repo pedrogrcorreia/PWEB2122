@@ -1,0 +1,23 @@
+﻿@model IEnumerable<UnidadeCurricular>
+
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+
+    <ul>
+        @foreach (var item in Model)
+            {
+                <li>Nome: @item.Nome</li>
+                <li>ECTS: @item.ECTS</li>
+                <li>Curso: @item.Curso</li>
+                <li>Semestre: @item.Semestre</li>
+            }
+    </ul>
+
+</body>
+</html>
